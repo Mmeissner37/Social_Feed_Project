@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+
 
 function App() {
+
+  const [posts, setPosts] = useState([{posterName: `Michaela`, body: `First poster!`}])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <nav><h3>Social Feed</h3></nav>
+      <form>
+        <label for="name">Name: </label><br></br>
+        <input type="text" id="posterName"></input><br></br>
+        <label for="body">Post: </label><br></br>
+        <input type="text" id="postBody"></input>
+        <button type="submit">Create</button>
+      </form>
     </div>
   );
 }
