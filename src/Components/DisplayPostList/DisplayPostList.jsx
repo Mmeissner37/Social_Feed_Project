@@ -1,3 +1,6 @@
+import CustomDislikeButton from "../CustomDislikeButton/CustomDislikeButton";
+import CustomLikeButton from "../CustomLikeButton/CustomLikeButton";
+
 
 
 const DisplayPostList = (props) => {
@@ -7,9 +10,10 @@ const DisplayPostList = (props) => {
             {props.parentPosts.map((post, index) => {
                 return(
                 <tr key = {index}>
-                    <td>{post.posterName}</td>
+                    <td className="table-data">{post.posterName}</td>
                     <td>{post.postBody}</td>
-                    <td><button>Like</button><button>Dislike</button></td>
+                    <td><CustomLikeButton message='Like' /></td>
+                    <td><CustomDislikeButton message="Dislike" /></td>
                 </tr>
                 );
             })}

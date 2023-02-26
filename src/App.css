@@ -1,8 +1,39 @@
+
+background {
+    background-color: teal;
+}
+
+.NavBar {
+    background-color: white;
+    padding: 1rem;
+}
+
+.col-lg-6 {
+    background-color: aquamarine;
+    margin: auto;
+    border-style: solid;
+    border-color: aquamarine;
+    border-bottom: auto;
+}
+
 .border-box {
     border: 1px;
     border-style: solid;
     border-color: black;
     padding: 1rem;
     margin: 2rem;
-    box-shadow: 0.5px;
+    box-shadow: 5px 5px rgb(193, 223, 233);
+    border-radius: 10px;
+    background-color: rgb(222, 245, 253);
+    text-align: left;
+    font-display: inline-block;
+}
+
+.table-data {
+    padding: 1rem;
+
+}
+
+.form-box {
+    margin-right: 1rem;
 }

@@ -1,0 +1,15 @@
+button {
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; 
+    padding: 4px 4px;
+}
+
+.active {
+    background-color: green;
+}
+
+.inactive {
+    background-color: grey;
+}

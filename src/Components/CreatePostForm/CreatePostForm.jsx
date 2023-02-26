@@ -20,11 +20,11 @@ const CreatePostForm = (props) => {
 
     return ( 
         <form onSubmit={handleSubmit}>
-            <label>Name: </label>
+            <label className='form-box'>Name: </label>
             <input type="text" value={posterName} onChange={(event) => setName(event.target.value)} /><br></br>
-            <label>Post: </label>
+            <label className='form-box'>Post: </label>
             <input type="text" value={postBody} onChange={(event) => setBody(event.target.value)} />
-            <button type="submit">Create</button>
+            <button type="submit" className="btn btn-primary btn-sm" style={{'margin-top': '0.5em'}}>Create</button>
         </form>
      );
 }

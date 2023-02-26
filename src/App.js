@@ -3,6 +3,8 @@ import NavBar from './Components/NavBar/NavBar';
 import CreatePostForm from './Components/CreatePostForm/CreatePostForm';
 import DisplayPostList from './Components/DisplayPostList/DisplayPostList';
 import './App.css';
+import CustomButton from './Components/CustomLikeButton/CustomLikeButton';
+
 
 function App() {
 
@@ -15,18 +17,22 @@ function App() {
 
   return (
     <div className = 'container-fluid'>
-      <NavBar />
-      <div className='col-lg-6'>
-        <div className='text-center'>
-          <div className='border-box'>
-            <CreatePostForm addNewPostProperty={addNewPost}/> 
+      <div className='NavBar'>
+        <NavBar />
+          <div className='col-lg-6'>
+            <div className='text-center'>
+              <div className='border-box'>
+                <div className='post-box'>
+                  <CreatePostForm addNewPostProperty={addNewPost}/> 
+                  </div>
+              </div>
+              <div className='border-box'>
+                <DisplayPostList parentPosts={posts} />
+              </div>
+            </div>
           </div>
-          <div className='border-box'>
-            <DisplayPostList parentPosts={posts} />
-          </div>
-        </div>
       </div>
-    </div>
+     </div>
   );
 }
 
