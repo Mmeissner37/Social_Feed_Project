@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       <NavBar />
-      <CreatePostForm />
+      <CreatePostForm parentPosts={posts}/>
 
     </div>
   );
