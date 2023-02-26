@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import NavBar from './Components/NavBar/NavBar';
 import CreatePostForm from './Components/CreatePostForm/CreatePostForm';
 import DisplayPostList from './Components/DisplayPostList/DisplayPostList';
-
+import './App.css';
 
 function App() {
 
@@ -14,11 +14,18 @@ function App() {
   }
 
   return (
-    <div>
+    <div className = 'container-fluid'>
       <NavBar />
-      <CreatePostForm addNewPostProperty={addNewPost}/> 
-      <DisplayPostList parentPosts={posts} />
-
+      <div className='col-lg-6'>
+        <div className='text-center'>
+          <div className='border-box'>
+            <CreatePostForm addNewPostProperty={addNewPost}/> 
+          </div>
+          <div className='border-box'>
+            <DisplayPostList parentPosts={posts} />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
