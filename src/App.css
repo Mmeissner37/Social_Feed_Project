@@ -1,7 +1,6 @@
 
-background {
-    background-color: teal;
-}
+
+
 
 .NavBar {
     background-color: white;
@@ -36,4 +35,8 @@ background {
 
 .form-box {
     margin-right: 1rem;
+}
+
+.post-box {
+    border-bottom: 2rem;
 }

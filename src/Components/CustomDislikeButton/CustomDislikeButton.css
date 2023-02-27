@@ -6,10 +6,10 @@ button {
     padding: 4px 4px;
 }
 
-.active {
+.active-dislike {
     background-color: red;
 }
 
-.inactive {
-    background-color: grey;
+.inactive-dislike {
+    background-color: lightgrey;
 }

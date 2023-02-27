@@ -3,20 +3,20 @@ import"./CustomDislikeButton.css";
 
 const CustomDislikeButton = (props) => {
 
-    const [buttonClass, setButtonClass] = useState('inactive');
+    const [buttonDislikeClass, setButtonDislikeClass] = useState('inactive-dislike');
 
     function handleClick() {
-        if (buttonClass === 'inactive') {
-            setButtonClass('active');
+        if (buttonDislikeClass === 'inactive-dislike') {
+            setButtonDislikeClass('active-dislike');
         }
         else {
-            setButtonClass('inactive')
+            setButtonDislikeClass('inactive-dislike')
         }
     }
 
     return ( 
         <div>
-            <button className={buttonClass} onClick={handleClick}>{props.message}</button>
+            <button className={buttonDislikeClass} onClick={handleClick}>{props.message}</button>
         </div>
      );
 }

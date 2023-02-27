@@ -6,10 +6,10 @@ button {
     padding: 4px 4px;
 }
 
-.active {
+.active-like {
     background-color: green;
 }
 
-.inactive {
-    background-color: grey;
+.inactive-like {
+    background-color: lightgrey;
 }
