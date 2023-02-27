@@ -7,7 +7,7 @@ button {
 }
 
 .active-dislike {
-    background-color: red;
+    background-color: rgb(243, 93, 93);
 }
 
 .inactive-dislike {
