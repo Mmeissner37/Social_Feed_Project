@@ -1,13 +1,19 @@
-import React, { useState } from 'react';
-import NavBar from './Components/NavBar/NavBar';
-import CreatePostForm from './Components/CreatePostForm/CreatePostForm';
-import DisplayPostList from './Components/DisplayPostList/DisplayPostList';
-import './App.css';
-
+import React, { useState } from "react";
+import NavBar from "./Components/NavBar/NavBar";
+import CreatePostForm from "./Components/CreatePostForm/CreatePostForm";
+import DisplayPostList from "./Components/DisplayPostList/DisplayPostList";
+import "./App.css";
 
 function App() {
-
-  const [posts, setPosts] = useState([{posterName: `Michaela Meissner`, postBody: `First poster! Whoohoo!`}])
+  const [posts, setPosts] = useState([
+    {
+      id: 1,
+      posterName: `Michaela Meissner`,
+      postBody: `First poster! Whoohoo!`,
+      isLiked: false,
+      isDisliked: false
+    },
+  ]);
 
   function addNewPost(post) {
     let tempPosts = [post, ...posts];
@@ -15,23 +21,23 @@ function App() {
   }
 
   return (
-    <div className = 'container-fluid'>
-      <div className='NavBar'>
+    <div className="container-fluid">
+      <div className="NavBar">
         <NavBar />
-          <div className='col-lg-6'>
-            <div className='text-center'>
-              <div className='border-box'>
-                <CreatePostForm addNewPostProperty={addNewPost}/> 
-              </div>
-              <div className='post-box'>
-                <div className='border-box'>
-                  <DisplayPostList parentPosts={posts} />
-                </div>
+      </div> 
+        <div className="col-lg-6">
+          <div className="text-center">
+            <div className="border-box">
+              <CreatePostForm addNewPostProperty={addNewPost} />
+            </div>
+            <div className="post-box">
+              <div className="border-box">
+                <DisplayPostList parentPosts={posts} />
               </div>
             </div>
           </div>
-      </div>
-     </div>
+        </div>
+    </div>
   );
 }
 

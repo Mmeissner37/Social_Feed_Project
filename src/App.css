@@ -13,6 +13,7 @@
     border-style: solid;
     border-color: aquamarine;
     border-bottom: auto;
+    height: 100%;
 }
 
 .border-box {
